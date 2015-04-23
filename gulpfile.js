@@ -3,7 +3,6 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var stylus = require('gulp-stylus');
 var nib = require('nib');
-var imagemin = require('gulp-imagemin');
 var bower = require('gulp-bower');
 var jade = require('gulp-jade');
 var gulpFilter = require('gulp-filter');
