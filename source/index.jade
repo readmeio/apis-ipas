@@ -1,9 +1,30 @@
 extends layout
 
 block content
-  .container
-    .big-gulp
-      img(src="/img/big-gulp.png")
-      strong Welcome to your new static website
-      a.btn.btn-primary#test-js(href="#")
-        i.fa.fa-thumbs-up.fa-right It works!
+  .container-fluid
+    header
+      a.sponsor(href="https://readme.io/")
+        img(src="/img/readme.png")
+    #landing
+      img(src="/img/logo.png")
+    #podcasts-container
+      #guests-container
+        .guest#koberger
+          .podcast-info
+            h2.podcast-episode
+              span.episode 004 
+              span.guest-name Greg Koberger 
+              a.twitter(href="http://twitter.com/gkoberger")
+                span.fa.fa-twitter
+            h3.company ReadMe.io 
+          .guest-image .
+      #soundcloud
+        #episode-info
+          p.summary
+            span.episode 004 
+            span.guest-name Gregory Koberger
+          p.company ReadMe.io
+          p.time 42 minutes
+          p.ipa Pliney the Elder
+        #player
+          player

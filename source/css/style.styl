@@ -1,18 +1,120 @@
 @import nib
 
-greyish = #eee
+greydark = #313942
+greydarker = #19202A
+greydarkest = #131922
 
 body
-  background-color greyish
-
-
-.big-gulp
+  background-color greydark
+  color white
   text-align center
-  img
-    display block
-    height 250px
-    margin 30px auto 20px
-  strong
-    display block
-    margin-bottom 10px
 
+a
+  color white
+  &:hover
+    color white
+    text-decoration none
+
+header
+  text-align left
+  padding-top 25px
+  height 10%
+  .sponsor
+    opacity 0.3
+    height 147px
+    margin-left 30px
+
+.container-fluid
+  padding 0
+  width 100%
+  height 100vh
+
+#landing
+  height 35vh
+  img
+    height 100%
+
+#podcasts-container
+  position absolute
+  height 55vh
+  width 100%
+
+#guests-container
+  position absolute
+  width 100%
+  height calc(100% - 120px)
+  bottom 0
+  .guest
+    display inline-block
+    display table
+    height 100%
+    width 25%
+    letter-spacing 1px
+    .podcast-info
+      display table-row
+      .podcast-episode
+        font-size 1.5em
+        .episode
+          font-weight 100
+          opacity 0.5
+        .twitter
+          font-size 110%
+          margin-left 7px
+      .company
+        font-size 20px
+        font-weight 100
+        margin 10px 0 20px 0
+    .guest-image
+      display table-row
+      width 100%
+      height 100%
+      &:hover
+        cursor hand
+        cursor pointer
+
+#soundcloud
+  display none
+  background greydarker
+  padding 0 60px
+  height 120px
+  width 100%
+  position absolute
+  bottom 0
+  #episode-info
+    background greydarkest
+    float left
+    width 300px
+    height 100%
+    padding 12px 25px
+    text-align left
+    p
+      margin 2px
+      letter-spacing 1px
+      font-size 14px
+      &.summary
+        font-size 120%
+        .episode
+          opacity 0.5
+          font-weight 100
+      &.company
+        font-size 105%
+        margin-left 43px
+      &.time,
+      &.ipa
+        font-weight 200
+        opacity 0.5
+  #player
+    overflow hidden
+    margin 0
+    iframe
+      width 100%
+      height 115px
+
+#koberger
+  .guest-image
+    background url("../img/guests/001-alex-off@2x.png") no-repeat center
+    background-size contain
+    padding-top 1px
+    &:hover
+      background url("../img/guests/001-alex-on@2x.png") no-repeat center
+      background-size contain
