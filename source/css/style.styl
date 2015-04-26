@@ -46,12 +46,13 @@ header
   bottom 0
   .guest
     display inline-block
-    display table
+    // display table
     height 100%
     width 25%
     letter-spacing 1px
     .podcast-info
-      display table-row
+      // display table-row
+      width 100%
       .podcast-episode
         font-size 1.5em
         .episode
@@ -65,12 +66,15 @@ header
         font-weight 100
         margin 10px 0 20px 0
     .guest-image
-      display table-row
+      // display table-row
       width 100%
-      height 100%
+      height calc(100% - 97px)
+      background-size contain
+      transition background 0.2s
       &:hover
         cursor hand
         cursor pointer
+        background-size contain
 
 #soundcloud
   display none
@@ -110,11 +114,14 @@ header
       width 100%
       height 115px
 
+// to refactor...
 #koberger
   .guest-image
-    background url("../img/guests/001-alex-off@2x.png") no-repeat center
-    background-size contain
-    padding-top 1px
+    background url("../img/guests/001-alex-off.png") no-repeat center
     &:hover
-      background url("../img/guests/001-alex-on@2x.png") no-repeat center
-      background-size contain
+      background url("../img/guests/001-alex-on.png") no-repeat center
+#alex
+  .guest-image
+    background url("../img/guests/001-alex-off.png") no-repeat center
+    &:hover
+      background url("../img/guests/001-alex-on.png") no-repeat center
