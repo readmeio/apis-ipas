@@ -46,12 +46,10 @@ header
   bottom 0
   .guest
     display inline-block
-    // display table
     height 100%
     width 25%
     letter-spacing 1px
     .podcast-info
-      // display table-row
       width 100%
       .podcast-episode
         font-size 1.5em
@@ -66,7 +64,6 @@ header
         font-weight 100
         margin 10px 0 20px 0
     .guest-image
-      // display table-row
       width 100%
       height calc(100% - 97px)
       background-size contain
@@ -102,11 +99,15 @@ header
           font-weight 100
       &.company
         font-size 105%
-        margin-left 43px
-      &.time,
+        margin-left 40px
+      &.duration,
       &.ipa
         font-weight 200
         opacity 0.5
+        margin-left 16px
+        .fa
+          margin-right 10px
+          opacity 0.7
   #player
     overflow hidden
     margin 0
@@ -118,10 +119,28 @@ header
 #koberger
   .guest-image
     background url("../img/guests/001-alex-off.png") no-repeat center
+    &.active,
     &:hover
       background url("../img/guests/001-alex-on.png") no-repeat center
+      background-size contain
+#amber
+  .guest-image
+    background url("../img/guests/001-alex-off.png") no-repeat center
+    &.active,
+    &:hover
+      background url("../img/guests/001-alex-on.png") no-repeat center
+      background-size contain
 #alex
   .guest-image
     background url("../img/guests/001-alex-off.png") no-repeat center
+    &.active,
     &:hover
       background url("../img/guests/001-alex-on.png") no-repeat center
+      background-size contain
+#kin
+  .guest-image
+    background url("../img/guests/001-alex-off.png") no-repeat center
+    &.active,
+    &:hover
+      background url("../img/guests/001-alex-on.png") no-repeat center
+      background-size contain
