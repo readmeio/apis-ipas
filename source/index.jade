@@ -2,7 +2,7 @@ extends layout
 
 block content
   header#header
-    a.sponsor(href="https://readme.io/")
+    a.sponsor(href="https://readme.io/" target="_blank")
       img(src="/img/readme.png")
   #landing
   #main-content
@@ -13,28 +13,60 @@ block content
             span.episode 004 
             span.guest-name Gregory Koberger
           p.company ReadMe.io
+          p.duration
+            span.fa.fa-clock-o 
+            span.time 42 minutes
+          p.ipa
+            span.fa.fa-beer 
+            span.ipa-name Pliney the Elder
         .image
+        .soundcloud
+          iframe.player(src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/196372345&amp;color=e28700&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false" frameborder="0" scrolling="no")
       .guest-container(data-guest="amber")
         .summary
           h2.overview
             span.episode 003 
             span.guest-name Amber Feng
           p.company Stripe
+          p.duration
+            span.fa.fa-clock-o 
+            span.time 42 minutes
+          p.ipa
+            span.fa.fa-beer 
+            span.ipa-name IPA Name
         .image
+        .soundcloud
+          iframe.player(src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/196372345&amp;color=e28700&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false" frameborder="0" scrolling="no")
       .guest-container(data-guest="alex")
         .summary
           h2.overview
             span.episode 002 
             span.guest-name Alex MacCaw
           p.company Clearbit
+          p.duration
+            span.fa.fa-clock-o 
+            span.time 42 minutes
+          p.ipa
+            span.fa.fa-beer 
+            span.ipa-name IPA Name
         .image
+        .soundcloud
+          iframe.player(src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/196372345&amp;color=e28700&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false" frameborder="0" scrolling="no")
       .guest-container(data-guest="kin")
         .summary
           h2.overview
             span.episode 001 
             span.guest-name Kin Lane
           p.company API Evangelist
+          p.duration
+            span.fa.fa-clock-o 
+            span.time 42 minutes
+          p.ipa
+            span.fa.fa-beer 
+            span.ipa-name Yummy IPA
         .image
+        .soundcloud
+          iframe.player(src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/196372345&amp;color=e28700&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false" frameborder="0" scrolling="no")
     #all-soundcloud-container
       .soundcloud-container(data-guest="koberger")
         .episode-summary
@@ -50,7 +82,7 @@ block content
             span.ipa-name Pliney the Elder
         .soundcloud-player
           iframe(src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/196372345&amp;color=e28700&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false" frameborder="0" scrolling="no")
-      .soundcloud-container(data-guest="amber").active
+      .soundcloud-container(data-guest="amber")
         .episode-summary
           p.overview
             span.episode 003 
@@ -61,7 +93,7 @@ block content
             span.time 42 minutes
           p.ipa
             span.fa.fa-beer 
-            span.ipa-name Another API
+            span.ipa-name IPA Name
         .soundcloud-player
           iframe()
       .soundcloud-container(data-guest="alex")
