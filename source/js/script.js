@@ -8,10 +8,10 @@ $(document).ready(function() {
     } else {
       var guest = $(this).data("guest");
       $(".guest-container").removeClass("active").addClass("inactive");
-      $(".soundcloud").removeClass("active");
+      $(".soundcloud-container").removeClass("active");
       
       $(this).removeClass("inactive").addClass("active");
-      $(".soundcloud[data-guest=" + guest + "]").addClass("active");
+      $(".soundcloud-container[data-guest=" + guest + "]").addClass("active");
       $("#main-content").animate({bottom: 0}, "easeOutQuint");
     }
   });

@@ -9,7 +9,7 @@ body
   background-color greydark
   color white
   text-align center
-  min-height 100vh
+  height 100vh
 
 a
   color white
@@ -40,10 +40,13 @@ header,
   bottom -120px
   #all-guests-container
     height calc(100% - 120px)
+    overflow-y hidden
+    white-space nowrap
     .guest-container
       display inline-block
-      width 25%
       height 100%
+      min-width 250px
+      width 25%
       &:hover
         cursor pointer
         cursor hand
@@ -61,29 +64,22 @@ header,
           font-weight 300
       .image
         height calc(100% - 70px)
-        background-size contain
         transition background 0.5s
-        background url("../img/guests/001-alex-off.png") no-repeat center
-      &.active
-        .image
-          background url("../img/guests/001-alex-on.png") no-repeat center
-          background-size contain
       &.inactive
         opacity 0.3
-  #soundcloud-container
+  #all-soundcloud-container
     height 120px
-    .soundcloud
+    .soundcloud-container
       height 100%
-      width 100%
-      background #19202A
+      background greydarker
       display none
-      padding 0 100px
+      padding 0 75px
       .episode-summary
         width 300px
         height 100%
         text-align left
         padding-left 10px
-        background #131922
+        background greydarkest
         display inline-block
         vertical-align top
         float left
@@ -113,45 +109,22 @@ header,
       .soundcloud-player
         overflow hidden
         iframe
+          height 120px
           width 100%
       &.active
         display block
 
-#main-content
-  #all-guests-container
-    .guest-container[data-guest="koberger"]
+episode(name, episode)
+  .guest-container[data-guest={name}]
+    .image
+      background url("../img/guests/" + episode "-" + name "-off@2x.png") no-repeat center
+      background-size contain
+    &:hover
       .image
-        background url("../img/guests/004-koberger-off@2x.png") no-repeat center
+        background url("../img/guests/" + episode "-" + name "-on@2x.png") no-repeat center
         background-size contain
-      &.active,
-      &:hover
-        .image
-          background url("../img/guests/004-koberger-on@2x.png") no-repeat center
-          background-size contain
-    .guest-container[data-guest="amber"]
-      .image
-        background url("../img/guests/001-alex-off@2x.png") no-repeat center
-        background-size contain
-      &.active,
-      &:hover
-        .image
-          background url("../img/guests/001-alex-on@2x.png") no-repeat center
-          background-size contain
-    .guest-container[data-guest="alex"]
-      .image
-        background url("../img/guests/001-alex-off@2x.png") no-repeat center
-        background-size contain
-      &.active,
-      &:hover
-        .image
-          background url("../img/guests/001-alex-on@2x.png") no-repeat center
-          background-size contain
-    .guest-container[data-guest="kin"]
-      .image
-        background url("../img/guests/004-koberger-off@2x.png") no-repeat center
-        background-size contain
-      &.active,
-      &:hover
-        .image
-          background url("../img/guests/004-koberger-on@2x.png") no-repeat center
-          background-size contain
+
+episode(kin, '001')
+episode(alex, '002')
+episode(amber, '003')
+episode(koberger, '004')

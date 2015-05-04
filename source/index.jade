@@ -35,8 +35,8 @@ block content
             span.guest-name Kin Lane
           p.company API Evangelist
         .image
-    #soundcloud-container
-      .soundcloud(data-guest="koberger")
+    #all-soundcloud-container
+      .soundcloud-container(data-guest="koberger")
         .episode-summary
           p.overview
             span.episode 004 
@@ -50,7 +50,7 @@ block content
             span.ipa-name Pliney the Elder
         .soundcloud-player
           iframe(src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/196372345&amp;color=e28700&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false" frameborder="0" scrolling="no")
-      .soundcloud(data-guest="amber").active
+      .soundcloud-container(data-guest="amber").active
         .episode-summary
           p.overview
             span.episode 003 
@@ -61,10 +61,10 @@ block content
             span.time 42 minutes
           p.ipa
             span.fa.fa-beer 
-            span.ipa-name Pliney
+            span.ipa-name Another API
         .soundcloud-player
           iframe()
-      .soundcloud(data-guest="alex")
+      .soundcloud-container(data-guest="alex")
         .episode-summary
           p.overview
             span.episode 002 
@@ -78,7 +78,7 @@ block content
             span.ipa-name Pliney
         .soundcloud-player
           iframe()
-      .soundcloud(data-guest="kin")
+      .soundcloud-container(data-guest="kin")
         .episode-summary
           p.overview
             span.episode 001 
@@ -89,7 +89,7 @@ block content
             span.time 42 minutes
           p.ipa
             span.fa.fa-beer 
-            span.ipa-name Pliney
+            span.ipa-name Yummy API
         .soundcloud-player
           iframe()
 
