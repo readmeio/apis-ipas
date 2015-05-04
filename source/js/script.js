@@ -2,8 +2,9 @@ $(document).ready(function() {
 
   $(".guest-container").click(function() {
     if ( $(this).hasClass("active") ) {
-      $(this).removeClass("active");
+      // $(this).removeClass("active");
       $(".guest-container").removeClass("inactive");
+      $(".guest-container").removeClass("active");
       $("#main-content").animate({bottom: -120}, "easeOutQuint");
     } else {
       var guest = $(this).data("guest");
