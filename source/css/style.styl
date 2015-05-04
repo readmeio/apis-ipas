@@ -39,83 +39,91 @@ header,
   min-height 200px
   width 100%
   bottom -120px
-  #all-guests-container
-    height calc(100% - 120px)
-    overflow-x auto
-    overflow-y hidden
-    white-space nowrap
-    .guest-container
-      display inline-block
-      height 100%
-      width 25%
-      min-width 250px
-      &:hover
-        cursor pointer
-        cursor hand
-      .summary
-        height 70px
-        h2.overview
-          font-size 22px
-          margin-top 0
-          .episode
-            opacity 0.5
-            font-weight 100
-            margin-right 3px
-        .company
-          font-size 17px
-          font-weight 300
-      .image
-        height calc(100% - 70px)
-        transition background 0.5s
-      &.inactive
-        opacity 0.3
-  #all-soundcloud-container
-    height 120px
-    .soundcloud-container
-      display none
-      height 100%
-      background greydarker
-      padding 0 75px
-      .episode-summary
-        width 300px
-        height 100%
-        text-align left
-        padding-left 10px
-        background greydarkest
-        display inline-block
-        vertical-align top
-        float left
-        font-size 14px
-        p
-          margin-bottom 4px
-        .overview
-          margin-top 15px
-          font-size 16px
-          .episode
-            font-weight 100
-          .guest-name
-            font-weight 500
-        .company
-          margin-left 45px
-        .episode,
-        .duration,
-        .ipa
-          opacity 0.5
-        .episode,
-        .fa
-          font-size 16px
-          float left
-          width 35px
-          text-align right
-          margin-right 10px
-      .soundcloud-player
-        overflow hidden
-        iframe
-          height 120px
-          width 100%
-      &.active
-        display block
 
+#all-guests-container
+  height calc(100% - 120px)
+  overflow-x auto
+  overflow-y hidden
+  white-space nowrap
+  .guest-container
+    display inline-block
+    height 100%
+    width 25%
+    min-width 200px
+    &:hover
+      cursor pointer
+      cursor hand
+    .summary
+      height 70px
+      h2.overview
+        font-size 20px
+        margin-top 0
+        .episode
+          opacity 0.5
+          font-weight 100
+          margin-right 3px
+      .company
+        font-size 16px
+        font-weight 300
+      .ipa,
+      .duration
+        display none
+    .image
+      height calc(100% - 70px)
+      transition background 0.5s
+    .soundcloud
+      display none
+    &.inactive
+      opacity 0.3
+
+#all-soundcloud-container
+  height 120px
+  .soundcloud-container
+    display none
+    height 100%
+    background greydarker
+    padding 0 75px
+    .episode-summary
+      width 300px
+      height 100%
+      text-align left
+      padding-left 10px
+      background greydarkest
+      display inline-block
+      vertical-align top
+      float left
+      font-size 14px
+      p
+        margin-bottom 4px
+      .overview
+        margin-top 15px
+        font-size 16px
+        .episode
+          font-weight 100
+        .guest-name
+          font-weight 500
+      .company
+        margin-left 45px
+      .episode,
+      .duration,
+      .ipa
+        opacity 0.5
+      .episode,
+      .fa
+        font-size 16px
+        float left
+        width 35px
+        text-align right
+        margin-right 10px
+    .soundcloud-player
+      overflow hidden
+      iframe
+        height 120px
+        width 100%
+    &.active
+      display block
+
+// css template for guest container
 episode(name, episode)
   .guest-container[data-guest={name}]
     .image
@@ -125,6 +133,7 @@ episode(name, episode)
         background url("../img/guests/" + episode "-" + name "-off@2x.png") no-repeat center
         background-size contain
     &:hover
+    &.active
       .image
         background url("../img/guests/" + episode "-" + name "-on.png") no-repeat center
         background-size contain
@@ -137,34 +146,73 @@ episode(alex, '002')
 episode(amber, '003')
 episode(koberger, '004')
 
-@media (max-width: 600px)
-  header,
+/* Tablet and medium screens */
+@media only screen and (max-width: 800px)
+  #all-guests-container
+    .guest-container
+      .summary
+        h2.overview
+          font-size 18px
+        .company
+          font-size 14px
+  #all-soundcloud-container
+    .soundcloud-container
+      padding 0
+      .episode-summary
+        width 200px
+
+/* Mobile Screens */
+#home.mobile
   #header
-    padding 10px 0 50px 0
     text-align center
+    height auto
+    padding 15px 0 0
     .sponsor
       margin 0
       img
         height 30px
+  #landing
+    height 200px
   #main-content
-    #all-soundcloud-container
-      .soundcloud-container
-        padding 0
-        .episode-summary
-          width 200px
-
-@media (max-width: 600px) and (max-height: 550px)
-  #main-content
-    #all-guests-container
-      overflow-x scroll
-      .guest-container
-        .summary
-          h2.overview
-            font-size 18px
-          .company
-            font-size 14px
-    #all-soundcloud-container
-      .soundcloud-container
-        .episode-summary
-          display none
-
+    position static
+    height auto
+  #all-guests-container
+    .guest-container
+      background greydarker
+      border-bottom 1px solid greydark
+      display block
+      width 100%
+      height auto
+      padding-top 20px
+      .summary
+        text-align left
+        float left
+        height 100%
+        margin 20px
+        margin-top 10px
+        width 170px
+        h2.overview
+          font-size 16px
+        .company
+          margin-left 35px
+        .duration,
+        .ipa
+          display block
+          opacity 0.5
+          .fa
+            float left
+            width 30px
+            text-align right
+            margin-right 5px
+            padding 3px
+      .image
+        overflow hidden
+        height 165px
+        background-position 80% 100%
+      .soundcloud
+        height 0
+        .player
+          height 0
+          width 100%
+  #all-soundcloud-container
+    display none
