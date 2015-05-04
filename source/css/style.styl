@@ -42,7 +42,7 @@ header,
   bottom -120px
   #all-guests-container
     height calc(100% - 120px)
-    overflow-x scroll
+    overflow-x auto
     overflow-y hidden
     white-space nowrap
     .guest-container
@@ -143,6 +143,7 @@ episode(koberger, '004')
         height 30px
   #main-content
     #all-guests-container
+      overflow-x scroll
       .guest-container
         .summary
           h2.overview
