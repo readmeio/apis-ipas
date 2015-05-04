@@ -123,12 +123,14 @@ episode(name, episode)
       background-size contain
       @media (-webkit-min-device-pixel-ratio: 1.5), not all, not all, not all, (min-resolution: 138dpi), (min-resolution: 1.5dppx)
         background url("../img/guests/" + episode "-" + name "-off@2x.png") no-repeat center
+        background-size contain
     &:hover
       .image
         background url("../img/guests/" + episode "-" + name "-on.png") no-repeat center
         background-size contain
         @media (-webkit-min-device-pixel-ratio: 1.5), not all, not all, not all, (min-resolution: 138dpi), (min-resolution: 1.5dppx)
           background url("../img/guests/" + episode "-" + name "-on@2x.png") no-repeat center
+          background-size contain
 
 episode(kin, '001')
 episode(alex, '002')
