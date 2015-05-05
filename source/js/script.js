@@ -21,13 +21,16 @@ $(document).ready(function() {
       if ( $(this).hasClass("active") ) {
         $(".guest-container").removeClass("inactive").removeClass("active");
         $("#main-content").animate({bottom: -120}, "easeOutQuint");
+        $("#landing").animate({top: 0}, 500);
       } else {
         var guest = $(this).data("guest");
         $(".guest-container").removeClass("active").addClass("inactive");
         $(".soundcloud-container").removeClass("active");
+
         $(this).removeClass("inactive").addClass("active");
         $(".soundcloud-container[data-guest=" + guest + "]").addClass("active");
         $("#main-content").animate({bottom: 0}, "easeOutQuint");
+        $("#landing").animate({top: -40}, 500);
       }
     });
   }
