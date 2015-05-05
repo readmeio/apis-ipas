@@ -2,9 +2,10 @@
   "name": "big-gulp",
   "version": "0.0.1",
   "authors": [
-    "Gregory Koberger <gkoberger@gmail.com>"
+    "Gregory Koberger <gkoberger@gmail.com>",
+    "Kim Pham <ms.kimpham@gmail.com>"
   ],
-  "description": "Static site generator using gulp",
+  "description": "Gulp",
   "main": "gulpfile.js",
   "license": "MIT",
   "private": true,

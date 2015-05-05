@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/readmeio/apis-ipas",
   "devDependencies": {
-    "gulp": "latest",
+    "gulp": "^3.8.11",
     "gulp-bower": "latest",
     "gulp-concat": "latest",
     "gulp-connect": "latest",
@@ -25,5 +25,9 @@
     "gulp-jade": "latest",
     "gulp-stylus": "latest",
     "nib": "latest"
+  },
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-install": "^0.4.0"
   }
 }
